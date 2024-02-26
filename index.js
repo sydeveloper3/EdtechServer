@@ -24,8 +24,11 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(
-  cors()
-);
+  cors({
+    origin:"edtech-client-olive.vercel.app",
+    credentials:true,
+  })
+)
 
 app.use(
   fileUpload({
